@@ -19,7 +19,7 @@ The symbols are all in *lowercase* though, because it's easier to parse.
 ---
 
 ```mermaid
-graph TD;
+graph LR;
   Rakin --> Ra;
   Rakin --> K;
   Rakin --> I;
