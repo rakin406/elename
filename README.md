@@ -18,18 +18,6 @@ The symbols are all in *lowercase* though, because it's easier to parse.
 
 ---
 
-```mermaid
-graph LR
-  Rakin --> Ra;
-  Rakin --> K;
-  Rakin --> I;
-  Rakin --> N;
-  Ra --> Radium;
-  K --> Potassium;
-  I --> Iodine;
-  N --> Nitrogen;
-```
-
 ## Installation and usage
 ```shell
 git clone https://gitlab.com/rakinhacker/elename.git
