@@ -3,8 +3,6 @@
 // Radium comes from "Ra" in "Rakin", Potassium comes from 'K' in "Rakin".
 // You get the idea.
 
-// TODO(rakin406):
-
 #include <algorithm>
 #include <iostream>
 #include <string>
