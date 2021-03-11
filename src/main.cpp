@@ -17,9 +17,6 @@ void print_elements(std::vector<std::string> *vec) {
     if (vec->empty()) {
         std::cout << "No elements\n";
     } else {
-        // Sort elements alphabetically for better look?
-        std::sort(vec->begin(), vec->end());
-
         for (const auto &elem : *vec) {
             // Separate elements with comma because it looks better
             if (elem == vec->back()) {
@@ -28,9 +25,6 @@ void print_elements(std::vector<std::string> *vec) {
                 std::cout << elem << ", ";
             }
         }
-
-        // Clear the vector or else elements of previous word will be appended
-        vec->clear();
     }
 }
 
@@ -53,7 +47,13 @@ int main() {
             }
         }
 
+        // Sort elements alphabetically for better look?
+        std::sort(elements_in_word.begin(), elements_in_word.end());
+
         print_elements(&elements_in_word);
+
+        // Clear the vector or else elements of previous word will be appended
+        elements_in_word.clear();
     }
 
     return 0;
