@@ -12,13 +12,11 @@
 
 #include "./elements.h"
 
-// Print the elements from given vector
 void print_elements(std::vector<std::string> *vec) {
     if (vec->empty()) {
         std::cout << "No elements\n";
     } else {
         for (const auto &elem : *vec) {
-            // Separate elements with comma because it looks better
             if (elem == vec->back()) {
                 std::cout << elem << "\n";
             } else {
@@ -35,10 +33,6 @@ int main() {
     while (true) {
         std::cout << ">> ";
         std::getline(std::cin, word);
-
-        // Convert word to lowercase because it's easier to parse. Check
-        // the elements from the periodic table header, they are lowercase and
-        // so the word has to be lowercase too.
         std::transform(word.begin(), word.end(), word.begin(), ::tolower);
 
         for (const auto &elem : ELEMENTS) {
@@ -47,12 +41,8 @@ int main() {
             }
         }
 
-        // Sort elements alphabetically for better look?
         std::sort(elements_in_word.begin(), elements_in_word.end());
-
         print_elements(&elements_in_word);
-
-        // Clear the vector or else elements of previous word will be appended
         elements_in_word.clear();
     }
 

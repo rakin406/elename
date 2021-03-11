@@ -1,9 +1,10 @@
+// All elements from the periodic table.
+
 #include <map>
 #include <string>
 
 #ifndef ELEMENTS_H
 #define ELEMENTS_H
-// All elements from the periodic table.
 const std::map<std::string, std::string> ELEMENTS = {
     // Group 1(Alkali metals)
     {"h", "Hydrogen"},
