@@ -1,8 +1,3 @@
-// This program prints the elements from any words, if available.
-// For example, Rakin -> Radium, Potassium, Iodine, Nitrogen.
-// Radium comes from "Ra" in "Rakin", Potassium comes from 'K' in "Rakin".
-// You get the idea.
-
 #include <algorithm>
 #include <iostream>
 #include <string>

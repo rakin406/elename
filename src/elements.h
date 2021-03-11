@@ -1,5 +1,3 @@
-// All elements from the periodic table.
-
 #include <map>
 #include <string>
 
