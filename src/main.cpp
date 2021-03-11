@@ -10,12 +10,12 @@
 
 #include "./elements.h"
 
-void print_elements(std::vector<std::string> *vec) {
-    if (vec->empty()) {
+void print_elements(std::vector<std::string> vec) {
+    if (vec.empty()) {
         std::cout << "No elements\n";
     } else {
-        for (const auto &elem : *vec) {
-            if (elem == vec->back()) {
+        for (const auto &elem : vec) {
+            if (elem == vec.back()) {
                 std::cout << elem << "\n";
             } else {
                 std::cout << elem << ", ";
@@ -40,7 +40,7 @@ int main() {
         }
 
         std::sort(elements_in_word.begin(), elements_in_word.end());
-        print_elements(&elements_in_word);
+        print_elements(elements_in_word);
         elements_in_word.clear();
     }
 
