@@ -22,6 +22,7 @@ The symbols are all in *lowercase* though, because it's easier to parse.
 ```shell
 git clone https://gitlab.com/rakinhacker/elename.git
 cd elename
+mkdir build
 make
 cd build
 ./elename
