@@ -2,15 +2,15 @@
 CXX=clang++
 
 # Flags
-CXXFLAGS=-std=c++14 -pipe -Wall -Wextra -Wshadow -Wfloat-equal -Wconversion \
-		 -pedantic -Wformat=2 -fdiagnostics-color=always
-DEBUG=-O0 -g -D_GLIBCXX_ASSERTIONS -fstack-clash-protection \
-	  -fstack-protector-strong -fstack-protector-all
-RELEASE=-O3
+CXXFLAGS=-std=c++17 -Wall -Wextra -Werror -Wformat-security -Wundef \
+		 -Wconversion -Wpedantic -Wformat=2 -fdiagnostics-color=always
+DEBUG=-O0 -g3 -ftrapv -fstack-clash-protection -fstack-protector-all
+RELEASE=-O2 -fdelete-null-pointer-checks -fexceptions
 
-# $(CXX) src/main.cpp $(CXXFLAGS) $(RELEASE) -o build/main
+# $(CXX) src/main.cpp $(CXXFLAGS) $(RELEASE) -o build/elename
+# $(CXX) src/main.cpp $(CXXFLAGS) $(DEBUG) -o build/elename
 elename: src/main.cpp
-	$(CXX) src/main.cpp $(CXXFLAGS) $(DEBUG) -o build/elename
+	$(CXX) src/main.cpp $(CXXFLAGS) $(RELEASE) -o build/elename
 
 clean:
 	rm build/elename
