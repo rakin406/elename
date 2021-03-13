@@ -5,7 +5,7 @@
 
 #include "./elements.h"
 
-void print_elements(std::vector<std::string> vec) {
+void printElements(std::vector<std::string> vec) {
   if (vec.empty()) {
     std::cout << "No elements\n";
   } else {
@@ -21,7 +21,7 @@ void print_elements(std::vector<std::string> vec) {
 
 int main() {
   std::string word;
-  std::vector<std::string> elements_in_word;
+  std::vector<std::string> elementsInWord;
 
   while (true) {
     std::cout << ">> ";
@@ -30,13 +30,13 @@ int main() {
 
     for (const auto &elem : ELEMENTS) {
       if (word.find(elem.first) != std::string::npos) {
-        elements_in_word.push_back(elem.second);
+        elementsInWord.push_back(elem.second);
       }
     }
 
-    std::sort(elements_in_word.begin(), elements_in_word.end());
-    print_elements(elements_in_word);
-    elements_in_word.clear();
+    std::sort(elementsInWord.begin(), elementsInWord.end());
+    printElements(elementsInWord);
+    elementsInWord.clear();
   }
 
   return 0;
