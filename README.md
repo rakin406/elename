@@ -11,19 +11,9 @@ all the elements available in it.
 Radium comes from "Ra" in **Ra**kin, Potassium comes from 'K' in Ra**k**in and
 so on.
 
----
-
-I wrote an elements header file which people can use in their code.
-The symbols are all in *lowercase* though, because it's easier to parse.
-
----
-
 ## Installation and usage
 ```shell
 git clone https://gitlab.com/rakinhacker/elename.git
-cd elename
-mkdir build
-make
-cd build
-./elename
+cd elename/src
+ts-node main.ts
 ```
