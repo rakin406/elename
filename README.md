@@ -15,5 +15,6 @@ so on.
 ```shell
 git clone https://gitlab.com/rakinhacker/elename.git
 cd elename/src
-ts-node main.ts
+javac Main.java
+java Main
 ```
