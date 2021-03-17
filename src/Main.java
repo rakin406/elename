@@ -18,7 +18,7 @@ public class Main extends Elements {
 
         while (true) {
             System.out.print(">> ");
-            String word = reader.next();
+            String word = reader.nextLine();
             if (word.isEmpty()) {
                 reader.close();
             }
