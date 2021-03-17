@@ -2,6 +2,15 @@ import java.util.Scanner;
 import java.util.ArrayList;
 
 public class Main extends Elements {
+    static ArrayList<String> findElements(String word, ArrayList<String> arr) {
+        elements.entrySet().forEach(entry-> {
+            if (word.toLowerCase().contains(entry.getKey())) {
+                arr.add(entry.getValue());
+            }
+        });
+        return arr;
+    }
+
     static void printElements(ArrayList<String> arr) {
         for (String elem : arr) {
             if (elem == arr.get(arr.size() - 1)) {
@@ -19,16 +28,7 @@ public class Main extends Elements {
         while (true) {
             System.out.print(">> ");
             String word = reader.nextLine();
-            if (word.isEmpty()) {
-                reader.close();
-            }
-
-            elements.entrySet().forEach(entry-> {
-                if (word.toLowerCase().contains(entry.getKey())) {
-                    elementsInWord.add(entry.getValue());
-                }
-            });
-
+            elementsInWord = findElements(word, elementsInWord);
             elementsInWord.sort(String::compareToIgnoreCase);
             printElements(elementsInWord);
             elementsInWord.clear();
