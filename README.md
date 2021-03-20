@@ -15,6 +15,6 @@ so on.
 ```shell
 git clone https://gitlab.com/rakinhacker/elename.git
 cd elename/src
-make
+javac Main.java
 java Main
 ```
