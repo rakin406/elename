@@ -13,8 +13,7 @@ so on.
 
 ## Installation and usage
 ```shell
-git clone https://gitlab.com/rakinhacker/elename.git
-cd elename/src
-javac Main.java
-java Main
+git clone https://github.com/rakin406/elename.git
+cd elename
+cargo run
 ```
