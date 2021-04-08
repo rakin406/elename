@@ -1,5 +1,5 @@
 use std::collections::HashMap;
-use std::io;
+use std::io::{self, Write};
 
 fn main() {
     let elements: HashMap<&str, &str> = [
@@ -136,6 +136,8 @@ fn main() {
 
     let mut elements_in_word = Vec::new();
     loop {
+        print!(">> ");
+        io::stdout().flush().unwrap();
         let mut word = String::new();
         io::stdin()
             .read_line(&mut word)
