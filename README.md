@@ -10,3 +10,5 @@ the elements available in it.
 
 Radium comes from "Ra" in **Ra**kin, Potassium comes from 'K' in Ra**k**in and
 so on.
+
+Link: https://rakin406.github.io/elename/
